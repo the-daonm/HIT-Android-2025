@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <!-- Top Section (TextViews and Erase Button) -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tvOperation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="start"
+            android:focusable="true"
+            android:maxLines="1"
+            android:scrollHorizontally="true"
+            android:text=""
+            android:textAlignment="textEnd"
+            android:textColor="@color/softblack"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/tvResult"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:maxLines="1"
+            android:text=""
+            android:textAlignment="textEnd"
+            android:textColor="@color/black"
+            android:textSize="45sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/erase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@null"
+            android:lines="1"
+            android:maxLines="1"
+            android:text="⌫"
+            android:textAlignment="textEnd"
+            android:textColor="@color/green"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvResult" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Buttons Section (Takes up half of the screen) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="vertical"
+        android:paddingBottom="30dp"
+        android:paddingTop="20dp"
+        android:paddingHorizontal="30dp"
+        android:background="@color/gray">
+
+        <LinearLayout
+            style="@style/buttonRow"
+            android:backgroundTint="@color/gray">
+
+            <Button
+                android:id="@+id/buttonAC"
+                style="@style/buttomNumber"
+                android:backgroundTint="@color/softblack"
+                android:textColor="@color/white"
+                android:text="AC"/>
+            <Button
+                android:id="@+id/buttonSmile1"
+                style="@style/buttomNumber"
+                android:backgroundTint="@color/softblack"
+                android:text="😊"/>
+            <Button
+                android:id="@+id/buttonSmile2"
+                style="@style/buttomNumber"
+                android:backgroundTint="@color/softblack"
+                android:text="🙄"/>
+            <Button
+                android:id="@+id/buttonDivide"
+                style="@style/buttomOperator"
+                android:text="/"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/buttonRow">
+
+            <Button
+                android:id="@+id/button7"
+                style="@style/buttomNumber"
+                android:text="7"/>
+            <Button
+                android:id="@+id/button8"
+                style="@style/buttomNumber"
+                android:text="8"/>
+            <Button
+                android:id="@+id/button9"
+                style="@style/buttomNumber"
+                android:text="9"/>
+            <Button
+                android:id="@+id/buttonMultiply"
+                style="@style/buttomOperator"
+                android:text="x"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/buttonRow">
+
+            <Button
+                android:id="@+id/button4"
+                style="@style/buttomNumber"
+                android:text="4"/>
+            <Button
+                android:id="@+id/button5"
+                style="@style/buttomNumber"
+                android:text="5"/>
+            <Button
+                android:id="@+id/button6"
+                style="@style/buttomNumber"
+                android:text="6"/>
+            <Button
+                android:id="@+id/buttonSubtract"
+                style="@style/buttomOperator"
+                android:text="-"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/buttonRow">
+
+            <Button
+                android:id="@+id/button1"
+                style="@style/buttomNumber"
+                android:text="1"/>
+            <Button
+                android:id="@+id/button2"
+                style="@style/buttomNumber"
+                android:text="2"/>
+            <Button
+                android:id="@+id/button3"
+                style="@style/buttomNumber"
+                android:text="3"/>
+            <Button
+                android:id="@+id/buttonAdd"
+                style="@style/buttomOperator"
+                android:text="+"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/buttonRow">
+
+            <Button
+                android:id="@+id/buttonSmile3"
+                style="@style/buttomNumber"
+                android:text="😪"/>
+            <Button
+                android:id="@+id/button0"
+                style="@style/buttomNumber"
+                android:text="0"/>
+            <Button
+                android:id="@+id/buttonSmile4"
+                style="@style/buttomNumber"
+                android:text="😬"/>
+            <Button
+                android:id="@+id/buttonEquals"
+                style="@style/buttomOperator"
+                android:text="="/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
